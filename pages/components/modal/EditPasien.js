@@ -38,7 +38,7 @@ const EditPasien = () => {
         >
           <button
             onClick={() => setEditPasienOpen(false)}
-            style={{ float: "right", margin: "10px" }}
+            style={{ float: "right" }}
             className="button-ud"
           >
             <FontAwesomeIcon
@@ -115,14 +115,11 @@ const EditPasien = () => {
             </div>
           </div>
         </Modal>
-        <button
-          onClick={() => setEditPasienOpen(true)}
-          className={styles.btn__edit}
-        >
+        <button onClick={() => setEditPasienOpen(true)}>
           <FontAwesomeIcon icon={faPencilAlt} />
         </button>{" "}
         |{" "}
-        <button className={styles.btn__delete}>
+        <button>
           <FontAwesomeIcon icon={faTrashAlt} />
         </button>
       </div>

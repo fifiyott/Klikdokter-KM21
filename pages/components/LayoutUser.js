@@ -1,29 +1,17 @@
-import Navside from "./Navside/Navside";
-import SubNavside from "./SubNavSide";
+import NavsideUser from "./NavsideUser";
 import styles from "../../styles/components/Layout.module.scss"
-import Navbar from "./Navbar/Navbar";
-import {
-  faTachometerAlt,
-  faWallet,
-  faComments,
-  faReceipt,
-  faStethoscope,
-  faUser,
-  faUsers,
-} from "@fortawesome/free-solid-svg-icons";
+import NavbarUser from "./NavbarUser";
 
-const Layout = ({children}) => {
+const LayoutUser = ({ children }) => {
     return (
         <div className={styles.layout}>
-            <Navside>
-                <SubNavside icon={faTachometerAlt} href={"/"} text={"Dashboard"} />
-            </Navside>
+            <NavsideUser />
             <div className={styles.container}>
-                <Navbar webAddress={"Dashboard"} email={"fifi@gmail.com"} identifier={"Admin Dokter"} />
+                <NavbarUser />
                 {children}
             </div>
         </div>
     );
 }
  
-export default Layout;
+export default LayoutUser;

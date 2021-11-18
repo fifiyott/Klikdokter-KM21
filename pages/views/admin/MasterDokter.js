@@ -1,6 +1,6 @@
 import { requireAuthentication } from "../../../utils/useAuth";
 import React from "react";
-import LayoutAdmin from "../../components/LayoutAdmin";
+import Layout from "../../components/Layout";
 import Link from "next/link";
 import styles from "../../../styles/MasterDokter.module.scss";
 // import the library
@@ -13,17 +13,27 @@ import {
   faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import Table from "../../components/table/Table";
 
 export default function MasterDokter(props) {
   return (
-    <LayoutAdmin>
+    <Layout>
       <div className="container">
         <div className="Header">
           <h1>Halo Dokter</h1>
         </div>
         <div className="Table">
+          <Table />
         </div>
       </div>
-    </LayoutAdmin>
+    </Layout>
   );
 }
+
+export const getServerSideProps = requireAuthentication((context) => {
+  return {
+    props: {
+      data: [],
+    },
+  };
+});

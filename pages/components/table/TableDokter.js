@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../../../redux/actions/UsersActions";
 import EditUser from "../modal/EditUser";
 
-const TableUsers = () => {
+const TableDokter = () => {
     const dispatch = useDispatch();
     const allUsersData = useSelector((state) => state.Users);
     const { loading, error, users } = allUsersData;
@@ -26,6 +26,7 @@ const TableUsers = () => {
             </tr>
         </thead>
         <tbody>
+            {}
             {loading ?  <tr className="spinner-border" role="status">
                             <td className="sr-only">Loading...</td>
                         </tr>
@@ -47,4 +48,4 @@ const TableUsers = () => {
     );
 }
  
-export default TableUsers;
+export default TableDokter;

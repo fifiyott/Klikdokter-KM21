@@ -11,9 +11,7 @@ import {
   faEyeSlash,
   faPlusCircle,
 } from "@fortawesome/free-solid-svg-icons";
-// import styles from "../../../styles/components/modal/AddPasien.module.scss";
 import styles from "../../../styles/components/modal/AddPasien.module.scss";
-
 import { addUsers } from "../../../redux/actions/UsersActions";
 
 const AddPasien = () => {

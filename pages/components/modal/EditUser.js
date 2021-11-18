@@ -38,7 +38,7 @@ const EditUser = () => {
         >
           <button
             onClick={() => setEditUserOpen(false)}
-            style={{ float: "right", margin: "10px" }}
+            style={{ float: "right" }}
             className="button-ud"
           >
             <FontAwesomeIcon
@@ -147,14 +147,11 @@ const EditUser = () => {
             </div>
           </div>
         </Modal>
-        <button
-          className={styles.btn__edit}
-          onClick={() => setEditUserOpen(true)}
-        >
+        <button onClick={() => setEditUserOpen(true)}>
           <FontAwesomeIcon icon={faPencilAlt} />
         </button>{" "}
         |{" "}
-        <button className={styles.btn__delete}>
+        <button>
           <FontAwesomeIcon icon={faTrashAlt} />
         </button>
       </div>

@@ -1,7 +1,7 @@
 import { requireAuthentication } from "../../../utils/useAuth";
 import React from "react";
 import Layout from "../../components/Layout";
-import Table from "../../components/table/Table";
+import TableDokter from "../../components/table/TableDokter";
 import AddUser from "../../components/modal/AddUser";
 import styles from "../../../styles/MasterDokter.module.scss";
 import Head from "next/head";
@@ -30,7 +30,7 @@ export default function MasterDokter() {
           <AddUser />
         </div>
         <div className="Table">
-          <Table />
+          <TableDokter />
         </div>
       </div>
     </Layout>

@@ -1,7 +1,7 @@
-import styles from "../../../styles/components/Navbar.module.scss";
+import styles from "../../styles/components/Navbar.module.scss";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/dist/client/router";
-import { userLogout } from "../../../redux/actions/LoginActions";
+import { userLogout } from "../../redux/actions/LoginActions";
 import Cookies from "js-cookie";
 // import the library
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
-const Navbar = ({ webAddress, email, identifier }) => {
+const Navbar = () => {
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -26,7 +26,7 @@ const Navbar = ({ webAddress, email, identifier }) => {
     <div className={styles.navbar}>
       <ul className={styles.nav__list}>
         <li className={styles.nav__listLabel}>
-          <h4>{webAddress}</h4>
+          <h4>Dashboard</h4>
         </li>
         <li className={styles.nav__listitem}>
           <div className={styles.user}>
@@ -36,8 +36,8 @@ const Navbar = ({ webAddress, email, identifier }) => {
                 alt=""
               />
               <div className={styles.user_profileName}>
-                <p style={{ color: "#2C81C2" }}>{email}</p>
-                <p style={{ fontSize: "12px" }}>{identifier}</p>
+                <p style={{ color: "#2C81C2" }}>fatihmuhamadridho@gmail.com</p>
+                <p style={{ fontSize: "12px" }}>Super Administrator</p>
               </div>
             </div>
             <a type="button">
@@ -46,9 +46,9 @@ const Navbar = ({ webAddress, email, identifier }) => {
           </div>
           <ul className={styles.nav__listitemdrop}>
             <li>
-              <button type="button" onClick={logout}>
+              <a type="button" onClick={logout}>
                 Logout
-              </button>
+              </a>
             </li>
           </ul>
         </li>

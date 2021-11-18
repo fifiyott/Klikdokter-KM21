@@ -1,31 +1,17 @@
-import Navside from "./Navside/Navside";
-import SubNavside from "./SubNavSide";
+import NavsideAdmin from "./NavsideAdmin";
 import styles from "../../styles/components/Layout.module.scss"
-import Navbar from "./Navbar/Navbar";
-import {
-  faTachometerAlt,
-  faWallet,
-  faComments,
-  faReceipt,
-  faStethoscope,
-  faUser,
-  faUsers,
-} from "@fortawesome/free-solid-svg-icons";
+import NavbarAdmin from "./NavbarAdmin";
 
-const Layout = ({children}) => {
+const LayoutAdmin = ({ children }) => {
     return (
         <div className={styles.layout}>
-            <Navside>
-                <SubNavside icon={faTachometerAlt} href={"/"} text={"Dashboard"} />
-                <SubNavside icon={faStethoscope} href={"/views/admin/MasterDokter"} text={"Master Dokter"} />
-                <SubNavside icon={faUser} href={"/views/admin/MasterPasien"} text={"Master Pasien"} />
-            </Navside>
+            <NavsideAdmin />
             <div className={styles.container}>
-                <Navbar webAddress={"Dashboard"} email={"fifi@gmail.com"} identifier={"Admin Dokter"} />
+                <NavbarAdmin />
                 {children}
             </div>
         </div>
     );
 }
  
-export default Layout;
+export default LayoutAdmin;
