@@ -1,0 +1,21 @@
+.searchContainer {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 300px;
+  height: 30px;
+  .icon {
+    margin-left: 10px;
+  }
+  input {
+    border: none;
+    background-color: rgb(243, 243, 243);
+    outline: none;
+    margin-left: 15px;
+  }
+}
+
+.navbarContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
